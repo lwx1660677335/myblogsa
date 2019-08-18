@@ -3,6 +3,8 @@ package blog.com.controller;
 import blog.com.blogUtils.revertMessage;
 import blog.com.serverce.SysUserService;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.session.Session;
@@ -18,7 +20,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 
 @RequestMapping(value = "/test")
 @Controller
@@ -82,10 +88,11 @@ public class loginController {
             map.put("date", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
             revertMessage.setStatus("200");
             revertMessage.setMessage("登陆成功!");
-            return JSON.toJSONString(revertMessage);
+
+            return StringEscapeUtils.unescapeJavaScript(JSONObject.toJSONString(revertMessage));
         }else{
             token.clear();
-            return JSON.toJSONString(revertMessage);
+            return StringEscapeUtils.unescapeJavaScript(JSONObject.toJSONString(revertMessage));
         }
     }
 }
