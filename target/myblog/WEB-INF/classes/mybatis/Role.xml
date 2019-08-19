@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="blog.com.dao.RoleDao">
+        <resultMap id="Role" type="blog.com.entity.Role">
+            <result column="id" property="id"/>
+            <result column="roleKey" property="roleKey"/>
+            <result column="rolename" property="rolename"/>
+            <result column="roleCode" property="roleCode"/>
+            <result column="roleCreteTime" property="roleCreteTime"/>
+            <result column="roleUpteTime" property="roleUpteTime"/>
+            <result column="roleUpteEndName" property="roleUpteEndName"/>
+        </resultMap>
+
+        <select id="findRoleNameByPowerID" resultMap="Role">
+            select  * from  Role where roleKey in
+            <foreach collection="list" separator="," open="(" close=")" item="powerId">
+                #{powerId}
+            </foreach>
+        </select>
+    </mapper>

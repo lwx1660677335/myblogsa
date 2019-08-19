@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="blog.com.dao.TUserRoleDao">
+        <resultMap id="TUserRole" type="blog.com.entity.TUserRole">
+            <result column="idKey" property="idKey"/>
+            <result column="user_id" property="userId"/>
+            <result column="role_id" property="roleid"/>
+        </resultMap>
+
+        <select id="findRoleIDByUserId" resultType="TUserRole" parameterType="String">
+            select  role_id from  t_user_role where user_id=#{userId}
+        </select>
+    </mapper>

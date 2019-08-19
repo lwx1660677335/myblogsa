@@ -94,12 +94,15 @@ public class CustomRealm extends AuthorizingRealm {
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
         }
-        if (Boolean.TRUE.equals(sysUsers.get(0).getSysAdminStart() == "1" ? Boolean.TRUE : Boolean.FALSE)) {
-            throw new LockedAccountException();
+        if (sysUsers.size() != 0) {
+            if (Boolean.TRUE.equals(sysUsers.get(0).getSysAdminStart() == "1" ? Boolean.TRUE : Boolean.FALSE)) {
+                throw new LockedAccountException();
+            }
         }
         Collection<Session> sessions = sessionDAO.getActiveSessions();
+        System.out.println("seesion个数："+sessions.size());
         for (Session session : sessions) {
-
+            System.out.println("seesionID:" + session.getId());
             System.out.println("登录ip:" + session.getHost());
 
             System.out.println("登录用户" + session.getAttribute(DefaultWebSubjectContext.PRINCIPALS_SESSION_KEY));
@@ -107,8 +110,10 @@ public class CustomRealm extends AuthorizingRealm {
             System.out.println("最后操作日期:" + session.getLastAccessTime());
 
         }
-        return new SimpleAuthenticationInfo(sysUsers.get(0).getSysName(), sysUsers.get(0).getSysPassword(), "a");
-
+        if (!(sysUsers.size() == 0)){
+            return new SimpleAuthenticationInfo(sysUsers.get(0).getSysName(), sysUsers.get(0).getSysPassword(), "a");
+    }
+        return null;
     }
 }
 

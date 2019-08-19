@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="blog.com.dao.TRolePermissiongroupsDao">
+    <resultMap id="TRolePermissiongroups" type="blog.com.entity.TRolePermissiongroups">
+        <result column="id" property="id"/>
+        <result column="idKey" property="idKey"/>
+        <result column="roleIdKey" property="roleIdKey"/>
+        <result column="permissiongroupsKey" property="permissiongroupsKey"/>
+    </resultMap>
+
+    <select id="findTRolePermissiongKeyByRoleKey" resultType="String">
+        select  permissiongroupsKey from  t_role_permissiongroups where roleIdKey in
+        <foreach  collection="list" item="permissionKey" open="(" close=")" separator=",">
+            #{permissionKey}
+        </foreach>
+    </select>
+</mapper>

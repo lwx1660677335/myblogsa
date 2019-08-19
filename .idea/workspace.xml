@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="myblog:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="96b2db15-aa16-4ea7-aa16-2e7ee0e51d3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/cc735c08-2517-4c9c-84d8-ae6c93b74939.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/myblog.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/blogUtils/SeesionManagerUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/blogUtils/UUID.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/blogUtils/revertMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/controller/loginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/dao/PermissiongroupsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/dao/RoleDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/dao/SysUserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/dao/TRolePermissiongroupsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/dao/TUserRoleDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/entity/Permissiongroups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/entity/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/entity/SysUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/entity/TRolePermissiongroups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/entity/TUserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/realm/CustomRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/Impl/PermissiongroupsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/Impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/Impl/SysUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/Impl/TRolePermissiongroupsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/Impl/TUserRoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/PermissiongroupsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/SysUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/TRolePermissiongroupsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/blog/com/serverce/TUserRoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/Permissiongroups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/Role.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/TRolePermissiongroups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/TUserRole.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/sysUser.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/META-INF/myblog.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/blogUtils/SeesionManagerUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/blogUtils/UUID.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/blogUtils/revertMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/controller/loginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/dao/PermissiongroupsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/dao/RoleDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/dao/SysUserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/dao/TRolePermissiongroupsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/dao/TUserRoleDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/entity/Permissiongroups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/entity/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/entity/SysUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/entity/TRolePermissiongroups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/entity/TUserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/realm/CustomRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/Impl/PermissiongroupsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/Impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/Impl/SysUserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/Impl/TRolePermissiongroupsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/Impl/TUserRoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/PermissiongroupsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/SysUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/TRolePermissiongroupsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/blog/com/serverce/TUserRoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/dao/PermissiongroupsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/dao/RoleDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/entity/Permissiongroups.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/entity/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/entity/TUserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/mybatis/Permissiongroups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/mybatis/Role.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/mybatis/TRolePermissiongroups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/mybatis/TUserRole.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/mybatis/sysUser.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/serverce/Impl/PermissiongroupsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/serverce/Impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/serverce/PermissiongroupsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/serverce/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/spring/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/spring/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/classes/spring/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/jsp/500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/jsp/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/jsp/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/jsp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/aspectjweaver-1.8.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/c3p0-0.9.5.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/cas-client-core-3.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/commons-lang-2.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/ehcache-core-2.5.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/fastjson-1.2.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/jackson-annotations-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/jackson-core-2.9.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/jackson-databind-2.9.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/javax.servlet-api-4.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/jsqlparser-0.9.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/log4jdbc-log4j2-jdbc4.1-1.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/mchange-commons-java-0.2.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/mybatis-3.4.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/mybatis-generator-core-1.3.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/mybatis-spring-1.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/mysql-connector-java-5.1.40.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/pagehelper-4.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/quartz-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-cas-1.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-core-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-ehcache-1.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-quartz-1.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-spring-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/shiro-web-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/slf4j-api-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/slf4j-log4j12-1.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/slf4j-nop-1.7.24.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-aop-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-aspects-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-beans-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-context-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-core-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-expression-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-jdbc-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-tx-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-web-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/spring-webmvc-4.3.13.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/lib/thymeleaf-extras-shiro-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92112.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92113.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/myblog/static/image/song/92120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/Testmain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blog/com/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blog/com/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myblog" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="mybatis-cfg.xml" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+    <option name="SCHEME" value="Project" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>AuthorizationAttributeSourceAdvisor</find>
+      <find>打印</find>
+      <find>findTRolePermissiongKeyByRoleKey</find>
+      <find>DefaultWebSessionManager</find>
+      <find>ShiroRealm</find>
+      <find>shiro-cas</find>
+      <find>findRoleNameByPowerID</find>
+      <find>sessionManager</find>
+      <find>shiroCacheManager</find>
+      <find>Session默认超时时间为</find>
+      <find>sessionIdCookie</find>
+      <find>登录ip</find>
+      <find>doGetAuthenticationInfo</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+  </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+          <option name="moduleName" value="myblog" />
+          <option name="title" value="myblog (Bundled Groovy 2.4.15)" />
+        </Entry>
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serverce/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/test/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serverce/Impl/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/realm/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/Permissiongroups.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/entity/Permissiongroups.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/entity/SysUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/entity/TRolePermissiongroups.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/entity/TUserRole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/SysUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/SysUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/SysUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/TUserRole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/PermissiongroupsService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/TUserRole.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/TUserRoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/TUserRoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/TRolePermissiongroupsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/TRolePermissiongroupsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/PermissiongroupsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/TRolePermissiongroupsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/TUserRoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/sysUser.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/PermissiongroupsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/Role.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/Permissiongroups.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/TRolePermissiongroups.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/Testmain.java" />
+        <option value="$PROJECT_DIR$/src/main/test/a.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/blogUtils/UUID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/blogUtils/SeesionManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/blogUtils/returnMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/blogUtils/revertMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/blogUtils/SeesionManagerUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/controller/loginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Users\mo\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectId" id="1P69bnBzgKkchOVZGQt1Mg3BVkM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="blogUtils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="realm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/blog/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/log" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\SoftwareCode\myblog\src\main\webapp" />
+      <recent name="F:\SoftwareCode\myblog\src\main\webapp\WEB-INF\jsp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\SoftwareCode\myblog\log" />
+      <recent name="F:\SoftwareCode\myblog\src\main\webapp" />
+      <recent name="F:\SoftwareCode\myblog\src\main\webapp\WEB-INF\static\image" />
+      <recent name="F:\SoftwareCode\myblog\src\main\resources\mybatis" />
+      <recent name="F:\SoftwareCode\myblog\src\main\java\blog\com\entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="blog.com.serverce.Impl" />
+      <recent name="blog.com.serverce" />
+      <recent name="serverce.Impl" />
+      <recent name="serverce" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="blog.com.dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.27">
+    <configuration name="Testmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_161\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Testmain" />
+      <module name="myblog" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_161\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="a" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_161\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="a" />
+      <module name="myblog" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 8.5.28" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="myblog:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_myblog" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53104" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="myblog:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.8.0_161" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="myblog:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_27_myblog" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61822" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="myblog:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.8.0_161">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="myblog:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_myblog" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61822" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="myblog:war" />
+          <artifact name="myblog:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Testmain" />
+      <item itemvalue="Application.a" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.27" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Testmain" />
+        <item itemvalue="Application.a" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@36d20713" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\mo\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96b2db15-aa16-4ea7-aa16-2e7ee0e51d3f" name="Default Changelist" comment="" />
+      <created>1565183752753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565183752753</updated>
+      <workItem from="1565183754076" duration="1319000" />
+      <workItem from="1565186547663" duration="2732000" />
+      <workItem from="1565224824286" duration="3459000" />
+      <workItem from="1565229443900" duration="1142000" />
+      <workItem from="1565267379065" duration="6419000" />
+      <workItem from="1565310526543" duration="5638000" />
+      <workItem from="1565333448156" duration="8104000" />
+      <workItem from="1565578510774" duration="1490000" />
+      <workItem from="1565591164064" duration="4537000" />
+      <workItem from="1565614310649" duration="8245000" />
+      <workItem from="1565627513140" duration="402000" />
+      <workItem from="1565628057291" duration="2193000" />
+      <workItem from="1565655615887" duration="2683000" />
+      <workItem from="1565660394441" duration="21945000" />
+      <workItem from="1565701727559" duration="3234000" />
+      <workItem from="1565746199022" duration="6376000" />
+      <workItem from="1565772395273" duration="2956000" />
+      <workItem from="1565827928573" duration="16401000" />
+      <workItem from="1565873619253" duration="5854000" />
+      <workItem from="1566097134380" duration="3019000" />
+      <workItem from="1566177276339" duration="5052000" />
+      <workItem from="1566216855123" duration="4803000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始化供应链代码">
+      <created>1566099496775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566099496775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_myblog - 2019.08.09 at 15h 36m 21s.xml">
+      <configuration name="All in myblog" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_myblog - 2019.08.09 at 15h 36m 46s.xml">
+      <configuration name="All in myblog" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="a - 2019.08.09 at 15h 48m 01s.xml">
+      <configuration name="a" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="116684000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21104388" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.7245902" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5351882" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3289689" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4977307" weight="0.3289689" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.4992224" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4992224" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32786885" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.4992224" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="14" sideWeight="0.4992224" weight="0.32786885" />
+      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49924356" weight="0.3295082" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3290469" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32970452" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化供应链代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化供应链代码" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/blog/com/controller/loginController.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/Testmain.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/myblog$Tomcat_8_5_27.ic" NAME="Tomcat 8.5.27 Coverage Results" MODIFIED="1565333262200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>session.getAttribute(DefaultWebSubjectContext.PRINCIPALS_SESSION_KEY</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>e.getMessage()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sessionDAO.getActiveSessions()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Collection&lt;Session&gt; sessions=sessionDAO.getActiveSessions()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String s= (String) session.getAttribute(&quot;李四&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>session.getAttribute(&quot;李四&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sysUsers.get(0).getSysName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.getSeesion(sysUsers.get(0).getSysName(), sysUsers.get(0).getSysName())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sysUsers.get(0).getSysAdminStart()==&quot;1&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/dao/SysUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/dao/PermissiongroupsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="67" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/dao/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/Role.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/realm/CachingRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/realm/AuthorizingRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="573" selection-start-line="573" selection-end-line="573" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/authz/ModularRealmAuthorizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="377" selection-start-line="377" selection-end-line="377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/mgt/AuthorizingSecurityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2-sources.jar!/org/apache/shiro/web/tags/HasRoleTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#1103#1104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2-sources.jar!/org/apache/shiro/web/tags/RoleTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2-sources.jar!/org/apache/shiro/web/tags/SecureTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/TRolePermissiongroupsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/entity/TUserRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/entity/SysUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+          <folding>
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/serverce/Impl/PermissiongroupsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/serverce/PermissiongroupsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/a.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/realm/AuthenticatingRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12282">
+          <caret line="579" selection-start-line="579" selection-end-line="579" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/session/mgt/eis/SessionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/Testmain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/TRolePermissiongroups.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="69" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/Permissiongroups.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/subject/support/DefaultSubjectContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/blogUtils/UUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#103#104#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/authc/UsernamePasswordToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="221" column="18" selection-start-line="221" selection-start-column="18" selection-end-line="221" selection-end-column="18" />
+          <folding>
+            <element signature="e#10695#10696#0" expanded="true" />
+            <element signature="e#10726#10727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="208" column="59" selection-start-line="208" selection-start-column="59" selection-end-line="208" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2162">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/blogUtils/SeesionManagerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.0/javax.servlet-api-4.0.0-sources.jar!/javax/servlet/http/HttpServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12673">
+          <caret line="621" column="27" selection-start-line="621" selection-start-column="27" selection-end-line="621" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2-sources.jar!/org/apache/shiro/web/servlet/ShiroHttpServletRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/blogUtils/revertMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <folding>
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/controller/loginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/session/mgt/eis/AbstractSessionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="182" column="17" selection-start-line="182" selection-start-column="17" selection-end-line="182" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2-sources.jar!/org/apache/shiro/web/session/HttpServletSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <element signature="e#2714#2715#0" expanded="true" />
+            <element signature="e#2756#2757#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/session/mgt/SimpleSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1367">
+          <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+          <folding>
+            <element signature="e#4620#4621#0" expanded="true" />
+            <element signature="e#4650#4651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2-sources.jar!/org/apache/shiro/session/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blog/com/realm/CustomRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="115" column="16" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new_file.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>myblog</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
+  </component>
+</project>
