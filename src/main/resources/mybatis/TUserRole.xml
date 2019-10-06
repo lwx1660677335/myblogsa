@@ -7,7 +7,7 @@
             <result column="role_id" property="roleid"/>
         </resultMap>
 
-        <select id="findRoleIDByUserId" resultType="TUserRole" parameterType="String">
+        <select id="findRoleIDByUserId" resultType="String" parameterType="String">
             select  role_id from  t_user_role where user_id=#{userId}
         </select>
     </mapper>

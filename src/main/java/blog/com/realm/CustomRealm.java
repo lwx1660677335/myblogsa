@@ -1,10 +1,10 @@
 package blog.com.realm;
 
+import blog.com.Exception.AccountException;
 import blog.com.entity.Permissiongroups;
 import blog.com.entity.Role;
 import blog.com.entity.TUserRole;
 import blog.com.serverce.*;
-import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
@@ -17,7 +17,6 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.subject.support.DefaultWebSubjectContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import blog.com.entity.SysUser;
@@ -43,23 +42,25 @@ public class CustomRealm extends AuthorizingRealm {
     @Autowired
     private PermissiongroupsService permissiongroupsService;
 
+
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String username = (String) super.getAvailablePrincipal(principalCollection);
+
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         System.out.println("值：" + username);
         if (StringUtils.isNotBlank(username)) {
             try {
                 List<SysUser> sysUsers = sysUserService.findByUname(username, 1, 1);
-                List<TUserRole> tUserRoles = tUserRoleService.findRoleIDByUserId(sysUsers.get(0).getSysAdminPower());
+                List<String> tUserRoles = tUserRoleService.findRoleIDByUserId(sysUsers.get(0).getSysAdminPower());
                 List<String> list = new ArrayList<>();
-                for (TUserRole list1 : tUserRoles) {
+               /* for (TUserRole list1 : tUserRoles) {
                     if (StringUtils.isNotBlank(list1.getRoleId())) {
                         list.add(list1.getRoleId());
                     }
-                }
-                List<Role> roles = roleService.findRoleNameByPowerID(list);
-                List<String> tRolePermissiongKeyByRoleKeyList = tRolePermissiongroupsService.findTRolePermissiongKeyByRoleKey(list);
+                }*/
+                List<Role> roles = roleService.findRoleNameByPowerID(tUserRoles);
+                List<String> tRolePermissiongKeyByRoleKeyList = tRolePermissiongroupsService.findTRolePermissiongKeyByRoleKey(tUserRoles);
                 for (String s : tRolePermissiongKeyByRoleKeyList
                 ) {
                     if (StringUtils.isBlank(s)) {
@@ -75,8 +76,11 @@ public class CustomRealm extends AuthorizingRealm {
                     info.addStringPermission(permissiongroups.getPermissionCode());
                 }
                 return info;
-            } catch (Exception e) {
-
+            }catch (AuthenticationException e){
+                throw e instanceof UnknownAccountException?new UnknownAccountException():e;
+            }catch (Exception e) {
+                System.out.println("权限效验:"+e.getMessage());
+                LOGGER.error(e.getMessage());
             }
         }
         return null;
@@ -94,27 +98,33 @@ public class CustomRealm extends AuthorizingRealm {
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
         }
-        if (sysUsers.size() != 0) {
-            if (Boolean.TRUE.equals(sysUsers.get(0).getSysAdminStart() == "1" ? Boolean.TRUE : Boolean.FALSE)) {
-                throw new LockedAccountException();
-            }
+        if (sysUsers.size() >= 2) {
+            LOGGER.error("请联系管理员,出现重复数据");
+            throw new AccountException("请联系管理员,出现重复数据");
         }
         Collection<Session> sessions = sessionDAO.getActiveSessions();
-        System.out.println("seesion个数："+sessions.size());
+        System.out.println("seesion个数：" + sessions.size());
         for (Session session : sessions) {
             System.out.println("seesionID:" + session.getId());
             System.out.println("登录ip:" + session.getHost());
-
             System.out.println("登录用户" + session.getAttribute(DefaultWebSubjectContext.PRINCIPALS_SESSION_KEY));
-
             System.out.println("最后操作日期:" + session.getLastAccessTime());
-
         }
-        if (!(sysUsers.size() == 0)){
+        if ("1".equals(sysUsers.get(0).getSysLockedState())) {
+            throw new LockedAccountException();
+        } else if ("1".equals(sysUsers.get(0).getSysDiscontinuedState())) {
+            throw new DisabledAccountException();
+        } else if (!(sysUsers.size() == 0)&&!("1".equals(sysUsers.get(0).getSysLockedState()))&&!("1".equals(sysUsers.get(0).getSysDiscontinuedState()))) {
             return new SimpleAuthenticationInfo(sysUsers.get(0).getSysName(), sysUsers.get(0).getSysPassword(), "a");
-    }
+        }
         return null;
     }
+
+    public void clearCached() {
+        PrincipalCollection principals = SecurityUtils.getSubject().getPrincipals();
+        super.clearCache(principals);
+    }
+
 }
 
 

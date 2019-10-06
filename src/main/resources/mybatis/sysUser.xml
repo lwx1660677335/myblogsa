@@ -6,15 +6,35 @@
         <result column="sys_userKey" property="sysUserKey"/>
         <result column="sys_name" property="sysName"/>
         <result column="sys_password" property="sysPassword"/>
+        <result column="sys_gender" property="sysgender" />
         <result column="sys_crete_time" property="sysCreteTime"/>
         <result column="sys_end_time" property="sysEndTime"/>
         <result column="sys_corresponding_power" property="sysCorrespondingPower"/>
         <result column="sys_power_start" property="sysPowerStart"/>
         <result column="sys_admin_start" property="sysAdminStart"/>
         <result column="sys_admin_power" property="sysAdminPower"/>
+        <result column="sys_discontinued_state" property="sysDiscontinuedState"/>
+        <result column="sys_locked_state" property="sysLockedState"/>
+        <result column="sys_department" property="sysdepartment"/>
+        <result column="sys_telepthone" property="systelepthone"/>
+        <result column="sys_adress" property="sysadress"/>
+        <result column="sys_spanned" property="sysspanned"/>
+        <result column="sys_access" property="sysaccess"/>
+
     </resultMap>
 
     <select id="findByUname" resultMap="SysUser" parameterType="string">
         select  * from  sys_user where sys_name= #{name}
+    </select>
+    <update id="updateByUnameForLockedState"  parameterType="SysUser" >
+        update sys_user set sys_locked_state=#{SysUser.sysLockedState} where sys_name=#{SysUser.sysName}
+    </update>
+
+    <update id="updateByUnameForDiscontinuedState"  parameterType="SysUser" >
+        update sys_user set sys_discontinued_state=#{SysUser.sysDiscontinuedState} where sys_name=#{SysUser.sysName}
+    </update>
+
+    <select id="AllUser" resultMap="SysUser">
+        select id,sys_userKey,sys_name,sys_gender,sys_crete_time,sys_end_time,sys_corresponding_power,sys_power_start,sys_admin_start,sys_admin_power,sys_discontinued_state,sys_locked_state,sys_department,sys_telepthone,sys_adress,sys_spanned,sys_access from sys_user
     </select>
 </mapper>

@@ -195,6 +195,12 @@
             <version>1.2.3</version>
         </dependency>
         <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.7</version>
@@ -203,6 +209,12 @@
                 <groupId>org.bgee.log4jdbc-log4j2</groupId>  
                 <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>  
                 <version>1.16</version>  
+        </dependency>
+        <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>cors-filter</artifactId>
+            <version>2.5</version>
+            <scope>runtime</scope>ehcache
         </dependency>
         <dependency>
             <groupId>com.github.theborakompanioni</groupId>

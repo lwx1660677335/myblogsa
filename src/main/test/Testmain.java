@@ -1,11 +1,7 @@
 import blog.com.entity.Permissiongroups;
-import blog.com.entity.SysUser;
 import blog.com.serverce.PermissiongroupsService;
-import blog.com.serverce.RoleService;
-import blog.com.serverce.SysUserService;
 import blog.com.serverce.TRolePermissiongroupsService;
 import com.alibaba.fastjson.JSON;
-import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

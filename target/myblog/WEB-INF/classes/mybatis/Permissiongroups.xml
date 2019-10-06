@@ -3,11 +3,13 @@
 <mapper namespace="blog.com.dao.PermissiongroupsDao">
     <resultMap id="Permissiongroups" type="blog.com.entity.Permissiongroups">
         <result column="id" property="id"/>
-        <result column="permissionName" property="permissionName"/>
-        <result column="permissionNumber" property="permissionNumber"/>
         <result column="permissionKey" property="permissionKey"/>
+        <result column="permissionName" property="permissionName"/>
         <result column="permissionCode" property="permissionCode"/>
+        <result column="permissionNumber" property="permissionNumber"/>
         <result column="permissionUrl" property="permissionUrl"/>
+        <result column="permissionFaterNumber" property="permissionFaterNumber"/>
+        <result column="permissionSonNumber" property="permissionSonNumber"/>
     </resultMap>
 
     <select id="findPermissionNameByPermissionKey" resultMap="Permissiongroups" >

@@ -12,9 +12,9 @@ public class TUserRoleServiceImpl implements TUserRoleService {
     @Autowired
     private TUserRoleDao tUserRoleDao;
     @Override
-    public List<TUserRole> findRoleIDByUserId(String userId) throws Exception {
-        List<TUserRole> list=null;
-        List<TUserRole> roleList=tUserRoleDao.findRoleIDByUserId(userId);
+    public List<String> findRoleIDByUserId(String userId) throws Exception {
+        List<String> list=null;
+        List<String> roleList=tUserRoleDao.findRoleIDByUserId(userId);
         if (roleList.size()>0){
             return roleList;
         }

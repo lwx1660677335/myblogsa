@@ -1,6 +1,8 @@
 package blog.com.blogUtils;
 
-public class revertMessage {
+
+
+public class revertMessage   {
     private int id;
     private String sessions;
     private String status;
@@ -11,6 +13,18 @@ public class revertMessage {
         this.sessions="000000";
         this.status="500";
         this.message="出现错误请联系管理!telephone:18328341582";
+    }
+    public revertMessage(int id,String sessions,String status,String message){
+        this.id=141;
+        this.sessions="000000";
+        this.status="500";
+        this.message="出现错误请联系管理!telephone:18328341582";
+    }
+    public revertMessage(boolean status){
+        this.id=141;
+        this.sessions="***";
+        this.status="200";
+        this.message="如有问题请联系!telephone:18328341582";
     }
     public String getMessage() {
         return message;
@@ -43,4 +57,6 @@ public class revertMessage {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
 }

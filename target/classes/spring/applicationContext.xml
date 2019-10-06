@@ -75,6 +75,7 @@
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="myRealm"/>
         <property name="sessionManager" ref="sessionManager"/>
+        <property name="cacheManager" ref="cacheManager"/>
     </bean>
     <!-- Shiro过滤器 核心-->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -83,17 +84,25 @@
         <!-- 身份认证失败，则跳转到登录页面的配置 -->
         <property name="loginUrl" value="/login.html"/>
         <!-- 权限认证失败，则跳转到指定页面 -->
-        <property name="unauthorizedUrl" value="/500.jsp"/>
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"></property>
+        <!-- 其他过滤器 -->
+        <!--<property name="filters">
+            <map>
+                &lt;!&ndash; <entry key="rememberMe" value-ref="RememberMeFilter"></entry> &ndash;&gt;
+                <entry key="kickout" value-ref="kickoutSessionControlFilter"/>
+            </map>
+        </property>-->
         <!-- Shiro连接约束配置,即过滤链的定义 -->
         <property name="filterChainDefinitions">
             <value>
                 <!--anon 表示匿名访问，不需要认证以及授权-->
-                /login.html=anon
+               <!-- /login.html=anon
                 /static/**=anon
+                /test/login/**=authc-->
                 <!--authc表示需要认证 没有进行身份认证是不能进行访问的-->
                <!-- /login*=authc
                 /static/*=anon-->
-
+                <!--/** = kickout,authc-->
             </value>
         </property>
     </bean>
@@ -117,15 +126,26 @@
   sessionManager里面拿到session -->
     <bean id="sessionDAO" class="org.apache.shiro.session.mgt.eis.MemorySessionDAO"/>
 
-    <!-- 缓存管理器 -->
-    <!--<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
-        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml" />
-    </bean>-->
+
     <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
-        <constructor-arg value="jeesite.session.id"/>
+        <constructor-arg value="shiro.session.id"/>
         <property name="httpOnly" value="true"/>
         <property name="maxAge" value="-1"/>
     </bean>
+    <!--<bean id="kickoutSessionControlFilter" class="blog.com.realm.KickoutSessionControlFilter">
+        <property name="cacheManager" ref="cacheManager"/>
+        <property name="sessionManager" ref="sessionManager"/>
+        &lt;!&ndash; 是否踢出后来登录的，默认是false；即后者登录的用户踢出前者登录的用户 &ndash;&gt;
+        <property name="kickoutAfter" value="false"/>
+        &lt;!&ndash; 同一个用户最大的会话数，默认1；比如2的意思是同一个用户允许最多同时两个人登录 &ndash;&gt;
+        <property name="maxSession" value="1"/>
+        <property name="kickoutUrl" value="/500.jsp"/>
+    </bean>-->
+    <!--cacheManager-->
+  <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml"/>
+    </bean>
+
 
 
 </beans>
