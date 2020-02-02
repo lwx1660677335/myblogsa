@@ -17,7 +17,7 @@
                                 expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
     <!--sping的配置文件和业务逻辑有关的 -->
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <context:property-placeholder location="classpath:jdbc.properties" system-properties-mode="FALLBACK" />
     <bean id="pooledDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="url" value="${url}"></property>
         <property name="driverClassName" value="${driver}"></property>

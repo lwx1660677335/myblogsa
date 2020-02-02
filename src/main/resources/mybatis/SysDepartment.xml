@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="blog.com.dao.SysDepartmentDao">
+    <resultMap id="SysDepartment" type="blog.com.entity.SysDepartment">
+        <result column="id" property="id"/>
+        <result column="departmentName" property="departmentName"/>
+    </resultMap>
+
+    <select id="getDepartment" resultMap="SysDepartment">
+        select * from sys_department where id in
+        <foreach collection="list" separator="," open="(" close=")" item="departmentid">
+            #{departmentid}
+        </foreach>
+    </select>
+    <select id="getAllDepartment" resultMap="SysDepartment">
+        select * from sys_department
+    </select>
+    <select id="getDepartmentOne" resultMap="SysDepartment">
+            select  * from  sys_department where id=#{departmentid}
+        </select>
+    <insert id="addDepartment" parameterType="java.util.List">
+        insert into sys_department (id,departmentName)values
+        <foreach collection="list" item="SysDepartment" separator=",">
+            (#{SysDepartment.id},#{SysDepartment.departmentName})
+        </foreach>
+    </insert>
+    <delete id="removeDepartment" parameterType="string" >
+        delete from sys_department where id=#{departmentid}
+    </delete>
+</mapper>

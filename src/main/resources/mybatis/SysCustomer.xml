@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="blog.com.dao.SysCustomerDao">
+        <resultMap id="SysCustomer" type="blog.com.entity.SysCustomer">
+            <result column="id" property="id"/>
+            <result column="customerType" property="customerType"/>
+            <result column="customerName" property="customerName"/>
+            <result column="customerUser" property="customerUser"/>
+            <result column="customerPhone" property="customerPhone"/>
+            <result column="customerAdress" property="customerAdress"/>
+            <result column="remark" property="remark"/>
+        </resultMap>
+
+
+
+    <select id="getAllCustomer" resultMap="SysCustomer">
+        select * from sys_customer
+    </select>
+    </mapper>

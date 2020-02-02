@@ -32,4 +32,32 @@ public interface SysUserDao {
      * @return
      */
      List<SysUser> AllUser();
+
+    /**
+     * 添加新用户
+     * @param
+     * @return
+     */
+     int addUser(@Param("SysUser") SysUser SysUser);
+
+    /**
+     * 修改用户信息
+     * @param sysUser
+     * @return
+     */
+     int updateUser(@Param("sysUser") SysUser sysUser);
+
+    /**
+     * 根据用户key查询关联角色表
+     * @param userid
+     * @return
+     */
+    List<SysUser> findByUserKey(List<String> userid);
+
+    /**addTUserRole
+     * 根据key删除用户
+     * @param userid
+     * @return
+     */
+     int deleteUsers(@Param("userid") List<String> userid);
 }

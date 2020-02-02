@@ -11,10 +11,14 @@
             <result column="roleUpteEndName" property="roleUpteEndName"/>
         </resultMap>
 
+
         <select id="findRoleNameByPowerID" resultMap="Role">
             select  * from  Role where roleKey in
             <foreach collection="list" separator="," open="(" close=")" item="powerId">
                 #{powerId}
             </foreach>
         </select>
+    <select id="getAllRole" resultMap="Role">
+        select id,roleKey,rolename from role
+    </select>
     </mapper>

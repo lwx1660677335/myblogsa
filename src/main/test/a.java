@@ -1,5 +1,6 @@
 import blog.com.blogUtils.UUID;
 import blog.com.entity.Permissiongroups;
+import blog.com.entity.SysCommodity;
 import blog.com.entity.SysUser;
 import blog.com.serverce.*;
 import com.alibaba.fastjson.JSON;
@@ -7,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class a {
-    public static UUID UUID = blog.com.blogUtils.UUID.createUUID();
+    /*public static UUID UUID = UUID.getUUID();*/
     @Autowired
     private SysUserService sysUserService;
     @Autowired
@@ -22,29 +24,28 @@ public class a {
     public static void main(String[] args)   {
 
         ApplicationContext application=new ClassPathXmlApplicationContext("spring/applicationContext.xml");
-        SysUserService sysUserService= (SysUserService) application.getBean("sysuserservice");
-        PermissiongroupsService permissiongroupsService= (PermissiongroupsService) application.getBean("permissiongroupsservice");
-        RoleService roleService= (RoleService) application.getBean("roleservice");
-        TRolePermissiongroupsService tRolePermissiongroupsService= (TRolePermissiongroupsService) application.getBean("trolepermissiongroupsservice");
-        TUserRoleService tUserRoleService= (TUserRoleService) application.getBean("tuserroleservice");
+        SysCommodityService sysUserService= (SysCommodityService) application.getBean("syscommodityservice");
+        try{
+            List<SysCommodity> SysUser=sysUserService.getAllSysCommoditys(1,10);
+            System.out.println(JSON.toJSON(SysUser));
+        }catch (Exception e){
+
+        }
         /*SysUser sysUser=new SysUser();
         sysUser.setSysName("李四");
         sysUser.setSysLockedState("1");
         int state=sysUserService.updateByUnameForLockedState(sysUser);
         System.out.println(JSON.toJSONString(state));*/
          /*   System.out.println(UUID.getUUID());*/
-        try {
-            long starttime=0;
-            System.out.println(starttime=System.currentTimeMillis());
-            List<SysUser> byUname =sysUserService.findByUname("李四",1,1);
-            List<String> roleIDByUserId =tUserRoleService.findRoleIDByUserId(byUname.get(0).getSysUserKey());
-            List<String> tRolePermissiongKeyByRoleKey=tRolePermissiongroupsService.findTRolePermissiongKeyByRoleKey(roleIDByUserId);
-            List<Permissiongroups> permissiongroups=permissiongroupsService.findPermissionNameByPermissionKey(tRolePermissiongKeyByRoleKey);
-            System.out.println((System.currentTimeMillis()-starttime)/1000+"MS");
-            System.out.println(JSON.toJSONString(permissiongroups.size()));
-        }catch (Exception e){
-
-        }
+//        try {
+//            List<String> list=new ArrayList<>();
+//            list.add("33312");
+//            long starttime=0;
+//            int num=sysUserService.deleteUsers(list);
+//            System.out.println(JSON.toJSONString(num));
+//        }catch (Exception e){
+//        System.out.println(e.getMessage());
+//        }
 
     }
 }

@@ -20,9 +20,6 @@ import java.util.List;
 public class SysUserServiceImpl implements SysUserService {
     @Autowired
     private SysUserDao sysUserDao;
-    @Autowired
-    private DataSourceTransactionManager transactionManager;
-    DefaultTransactionDefinition def = new DefaultTransactionDefinition();
 
 
     @Override
@@ -51,8 +48,6 @@ public class SysUserServiceImpl implements SysUserService {
 
     @Override
     public int updateByUnameForDiscontinuedState(SysUser SysUser) {
-        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
-        TransactionStatus status = transactionManager.getTransaction(def);
         int number=0;
         if (StringUtils.isNotBlank(SysUser.getSysDiscontinuedState())&&StringUtils.isNotBlank(SysUser.getSysName()))
         {
@@ -60,7 +55,6 @@ public class SysUserServiceImpl implements SysUserService {
              * 如果修改出现2大于2条数据那么回滚事物返回错误处理
              */
             if (sysUserDao.updateByUnameForDiscontinuedState(SysUser)>2){
-                transactionManager.rollback(status);
                 return number;
             }else {
                 return number=sysUserDao.updateByUnameForDiscontinuedState(SysUser);
@@ -74,5 +68,37 @@ public class SysUserServiceImpl implements SysUserService {
             List<SysUser> sysUser = sysUserDao.AllUser();
             PageInfo<SysUser> listPageInfo = new PageInfo<>(sysUser);
             return listPageInfo.getList();
+    }
+
+    @Override
+    public int addUser(SysUser sysUser) {
+        if (sysUser!=null){
+            return sysUserDao.addUser(sysUser);
+        }
+        return 0;
+    }
+
+    @Override
+    public int updateUser(SysUser sysUser) {
+        if (sysUser!=null){
+            return sysUserDao.updateUser(sysUser);
+        }
+        return 0;
+    }
+
+    @Override
+    public List<SysUser> findByUserKey(List<String> userid) {
+        if (userid!=null&&!userid.isEmpty()){
+            return sysUserDao.findByUserKey(userid);
+        }
+        return null;
+    }
+
+    @Override
+    public int deleteUsers(List<String> userid) {
+        if (userid!=null&&!userid.isEmpty()){
+            return sysUserDao.deleteUsers(userid);
+        }
+        return -1;
     }
 }

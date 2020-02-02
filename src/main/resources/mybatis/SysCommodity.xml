@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="blog.com.dao.SysCommodityDao">
+        <resultMap id="SysCommodity" type="blog.com.entity.SysCommodity">
+            <result column="commodity_Id" property="commodityId"/>
+            <result column="libraryID" property="libraryId"/>
+            <result column="commodityName" property="commodityName"/>
+            <result column="commodityCode" property="commodityCode"/>
+            <result column="commodityType" property="commodityType"/>
+            <result column="commodityModel" property="commodityModel"/>
+            <result column="commoditySpecs" property="commoditySpecs"/>
+            <result column="commodityName1" property="commodityName1"/>
+            <result column="SupplierID" property="supplierId"/>
+            <result column="commodityStock" property="commodityStock"/>
+            <result column="commodityStockState" property="commodityStockState"/>
+            <result column="commodityCompany" property="commodityCompany"/>
+            <result column="purchasePrice" property="purchasePrice"/>
+            <result column="stockPrice" property="stockPrice"/>
+            <result column="commodityRemind" property="commodityRemind"/>
+            <result column="commodityCreteTime" property="commodityCreteTime"/>
+            <result column="backlog" property="backlog"/>
+            <result column="remark" property="remark"/>
+            <collection property="SysCompany" ofType="blog.com.entity.SysCompany" column="id">
+                <result column="companyName" property="companyName"/>
+                <result column="remark" property="remark"/>
+            </collection>
+            <collection property="SysCustomer" ofType="blog.com.entity.SysCustomer" column="id">
+                <result column="customerType" property="customerType"/>
+                <result column="customerName" property="customerName"/>
+                <result column="customerUser" property="customerUser"/>
+                <result column="customerPhone" property="customerPhone"/>
+                <result column="customerAdress" property="customerAdress"/>
+                <result column="remark" property="remark"/>
+            </collection>
+
+        </resultMap>
+
+        <select id="getSysCommoditysbyName" resultMap="SysCommodity">
+            select  * from  sys_commodity where commodityName=#{sysCommodityName}
+        </select>
+        <select id="getAllSysCommoditys" resultMap="SysCommodity">
+            select  * from  sys_commodity c inner join sys_company p on p.id=c.commodityCompany inner join sys_customer t on c.SupplierID=t.id
+        </select>
+    </mapper>

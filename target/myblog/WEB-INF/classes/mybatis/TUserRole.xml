@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    <mapper namespace="blog.com.dao.TUserRoleDao">
-        <resultMap id="TUserRole" type="blog.com.entity.TUserRole">
-            <result column="idKey" property="idKey"/>
-            <result column="user_id" property="userId"/>
-            <result column="role_id" property="roleid"/>
-        </resultMap>
+<mapper namespace="blog.com.dao.TUserRoleDao">
+    <resultMap id="TUserRole" type="blog.com.entity.TUserRole">
+        <result column="id" property="id"/>
+        <result column="idKey" property="idKey"/>
+        <result column="user_id" property="userId"/>
+        <result column="role_id" property="roleId"/>
+    </resultMap>
 
-        <select id="findRoleIDByUserId" resultType="String" parameterType="String">
+    <select id="findRoleIDByUserId" resultType="String" parameterType="String">
             select  role_id from  t_user_role where user_id=#{userId}
         </select>
-    </mapper>
+    <insert id="addTUserRole" parameterType="tUserRole">
+        insert into t_user_role(idKey,user_id,role_id) values (
+        <trim suffixOverrides=",">
+            #{tUserRole.idKey},#{tUserRole.userId},#{tUserRole.roleId}
+        </trim>
+        )
+    </insert>
+    <delete id="deleteTUserRole" parameterType="java.util.List">
+        delete from t_user_role
+        where user_id in
+        <foreach collection="item" item="item" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+</mapper>

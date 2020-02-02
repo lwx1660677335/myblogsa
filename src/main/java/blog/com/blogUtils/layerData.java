@@ -8,7 +8,7 @@ public class layerData {
     private int count;
     private List data;
     public layerData(){
-        setMessage("返回失败!");
+        setMessage("当前占无数据!");
         setStatus(1);
         setCount(0);
         setData(null);

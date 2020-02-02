@@ -76,7 +76,7 @@ public class MemusController {
                             childMenu.setPermissionCode(permissiongroups2.getPermissionCode());
                             childMenu.setPermissionName(permissiongroups2.getPermissionName());
                             childMenu.setPermissionFaterNumber(permissiongroups2.getPermissionFaterNumber());
-                            childMenu.setPermissionSonNumber(permissiongroups2.getPermissionSonNumber());
+                            /*childMenu.setPermissionSonNumber(permissiongroups2.getPermissionSonNumber());*/
                             childMenu.setPermissionUrl(permissiongroups2.getPermissionUrl());
                             childMenu.setPermissionNumber(permissiongroups2.getPermissionNumber());
                             childMenus.add(childMenu);
@@ -95,7 +95,8 @@ public class MemusController {
             }else {
                 System.out.println("员工:"+subject.getPrincipal()+"正在尝试登陆系统,但不具备权限基础权限!执行锁定账号!");
                 LOGGER.info("员工:"+subject.getPrincipal()+"正在尝试登陆系统,但不具备权限基础权限!执行锁定账号!");
-                SysUser sysUser=new SysUser();
+                SysUser sysUser;
+                sysUser = new SysUser();
                 sysUser.setSysName((String)subject.getPrincipal());
                 sysUser.setSysDiscontinuedState("1");
                 if (sysUserService.updateByUnameForDiscontinuedState(sysUser)==0){
@@ -113,7 +114,7 @@ public class MemusController {
             }
         }else {
             revertMessage.setSessions("null");
-            revertMessage.setStatus("500");
+            revertMessage.setStatus("400");
             revertMessage.setMessage("请登录!");
             return JSON.toJSONString(revertMessage);
         }

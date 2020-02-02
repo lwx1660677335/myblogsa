@@ -42,10 +42,11 @@ public class loginController {
         //获取当前的Subject
         Subject currentUser = SecurityUtils.getSubject();
         Cookie[] cookies =request.getCookies();
+        if (cookies!=null){
         for (Cookie cookiesa:cookies
              ) {
             System.out.println("cookie:"+cookiesa);
-        }
+        }}
         try {
             //在调用了login方法后,SecurityManager会收到AuthenticationToken,并将其发送给已配置的Realm执行必须的认证检查
             //每个Realm都能在必要时对提交的AuthenticationTokens作出反应

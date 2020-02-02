@@ -20,4 +20,10 @@ public class RoleServiceImpl implements RoleService {
             return null;
         }
     }
+
+    @Override
+    public List<Role> getAllRole() {
+        List<Role> roleList=roleDao.getAllRole();
+        return roleList.size()!=0&&roleList!=null?roleList:null;
+    }
 }

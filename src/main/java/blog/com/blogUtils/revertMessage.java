@@ -1,12 +1,22 @@
 package blog.com.blogUtils;
 
 
+import java.util.List;
 
 public class revertMessage   {
     private int id;
     private String sessions;
     private String status;
     private String message;
+    private List data;
+
+    public List getData() {
+        return data;
+    }
+
+    public void setData(List data) {
+        this.data = data;
+    }
 
     public revertMessage(){
         this.id=141;
@@ -15,7 +25,7 @@ public class revertMessage   {
         this.message="出现错误请联系管理!telephone:18328341582";
     }
     public revertMessage(int id,String sessions,String status,String message){
-        this.id=141;
+        this.id=22;
         this.sessions="000000";
         this.status="500";
         this.message="出现错误请联系管理!telephone:18328341582";

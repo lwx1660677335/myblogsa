@@ -2,11 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="blog.com.dao.SysUserDao">
     <resultMap id="SysUser" type="blog.com.entity.SysUser">
+    <result column="id" property="id"/>
+    <result column="sys_userKey" property="sysUserKey"/>
+    <result column="sys_name" property="sysName"/>
+    <result column="sys_password" property="sysPassword"/>
+    <result column="sys_gender" property="sysgender"/>
+    <result column="sys_crete_time" property="sysCreteTime"/>
+    <result column="sys_end_time" property="sysEndTime"/>
+    <result column="sys_corresponding_power" property="sysCorrespondingPower"/>
+    <result column="sys_power_start" property="sysPowerStart"/>
+    <result column="sys_admin_start" property="sysAdminStart"/>
+    <result column="sys_admin_power" property="sysAdminPower"/>
+    <result column="sys_discontinued_state" property="sysDiscontinuedState"/>
+    <result column="sys_locked_state" property="sysLockedState"/>
+    <result column="sys_department" property="sysdepartment"/>
+    <result column="sys_telepthone" property="systelepthone"/>
+    <result column="sys_adress" property="sysadress"/>
+    <result column="sys_spanned" property="sysspanned"/>
+    <result column="sys_access" property="sysaccess"/>
+    </resultMap>
+
+    <resultMap id="SysUserdeparment" type="blog.com.entity.SysUser">
         <result column="id" property="id"/>
         <result column="sys_userKey" property="sysUserKey"/>
         <result column="sys_name" property="sysName"/>
         <result column="sys_password" property="sysPassword"/>
-        <result column="sys_gender" property="sysgender" />
+        <result column="sys_gender" property="sysgender"/>
         <result column="sys_crete_time" property="sysCreteTime"/>
         <result column="sys_end_time" property="sysEndTime"/>
         <result column="sys_corresponding_power" property="sysCorrespondingPower"/>
@@ -15,26 +36,132 @@
         <result column="sys_admin_power" property="sysAdminPower"/>
         <result column="sys_discontinued_state" property="sysDiscontinuedState"/>
         <result column="sys_locked_state" property="sysLockedState"/>
-        <result column="sys_department" property="sysdepartment"/>
+        <result column="departmentName" property="sysdepartment"/>
         <result column="sys_telepthone" property="systelepthone"/>
         <result column="sys_adress" property="sysadress"/>
         <result column="sys_spanned" property="sysspanned"/>
         <result column="sys_access" property="sysaccess"/>
-
+        <collection property="sysdepartmentName" ofType="blog.com.entity.SysDepartment" column="id">
+            <result column="sys_department" property="id"/>
+            <result column="departmentName" property="departmentName"/>
+        </collection>
     </resultMap>
 
     <select id="findByUname" resultMap="SysUser" parameterType="string">
         select  * from  sys_user where sys_name= #{name}
     </select>
-    <update id="updateByUnameForLockedState"  parameterType="SysUser" >
+    <select id="findByUserKey" resultMap="SysUser" parameterType="java.util.List">
+        select  id,sys_userKey,sys_admin_power from  sys_user where sys_userKey in
+        <foreach collection="list" separator="," open="(" close=")" item="userid">
+            #{userid}
+        </foreach>
+    </select>
+    <update id="updateByUnameForLockedState" parameterType="SysUser">
         update sys_user set sys_locked_state=#{SysUser.sysLockedState} where sys_name=#{SysUser.sysName}
     </update>
 
-    <update id="updateByUnameForDiscontinuedState"  parameterType="SysUser" >
+    <update id="updateByUnameForDiscontinuedState" parameterType="SysUser">
         update sys_user set sys_discontinued_state=#{SysUser.sysDiscontinuedState} where sys_name=#{SysUser.sysName}
     </update>
 
-    <select id="AllUser" resultMap="SysUser">
-        select id,sys_userKey,sys_name,sys_gender,sys_crete_time,sys_end_time,sys_corresponding_power,sys_power_start,sys_admin_start,sys_admin_power,sys_discontinued_state,sys_locked_state,sys_department,sys_telepthone,sys_adress,sys_spanned,sys_access from sys_user
+    <select id="AllUser" resultMap="SysUserdeparment">
+        select u.id,u.sys_userKey,u.sys_name,u.sys_gender,u.sys_crete_time,u.sys_end_time,u.sys_corresponding_power,u.sys_power_start,u.sys_admin_start,u.sys_admin_power,u.sys_discontinued_state,u.sys_locked_state,u.sys_department,u.sys_telepthone,u.sys_adress,u.sys_spanned,u.sys_access,d.id, d.departmentName from sys_user u inner join sys_department d on d.id=u.sys_department
     </select>
+
+    <insert id="addUser" parameterType="SysUser">
+        insert into sys_user(
+        sys_userKey,
+        sys_name,
+        sys_password,
+        sys_gender,
+        sys_crete_time,
+        sys_end_time,
+        sys_corresponding_power,
+        sys_power_start,
+        sys_admin_start,
+        sys_admin_power,
+        sys_discontinued_state,
+        sys_locked_state,
+        sys_department,
+        sys_telepthone,
+        sys_adress,
+        sys_spanned,
+        sys_access
+        ) values(
+        <trim suffixOverrides=",">
+            #{SysUser.sysUserKey},
+            <if test="SysUser.sysName!=null and SysUser.sysName!=''">
+                #{SysUser.sysName},
+            </if>
+            <if test="SysUser.sysPassword!=null and SysUser.sysPassword!=''">
+                #{SysUser.sysPassword},
+            </if>
+            #{SysUser.sysgender},
+            #{SysUser.sysCreteTime},
+            #{SysUser.sysEndTime},
+            #{SysUser.sysCorrespondingPower},
+            <if test="SysUser.sysPowerStart!=null and SysUser.sysPowerStart!=''">
+                #{SysUser.sysPowerStart},
+            </if>
+            <if test="SysUser.sysAdminStart!=null and SysUser.sysAdminStart!=''">
+                #{SysUser.sysAdminStart},
+            </if>
+            #{SysUser.sysAdminPower},
+            <if test="SysUser.sysDiscontinuedState!=null and SysUser.sysDiscontinuedState!=''">
+                #{SysUser.sysDiscontinuedState},
+            </if>
+            <if test="SysUser.sysLockedState!=null and SysUser.sysLockedState=''">
+                #{SysUser.sysLockedState},
+            </if>
+            #{SysUser.sysdepartment},
+            #{SysUser.systelepthone},
+            #{SysUser.sysadress},
+            #{SysUser.sysspanned},
+            #{SysUser.sysaccess}
+        </trim>
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="SysUser">
+        update sys_user
+        <set>
+            <if test="SysUser.sysName!=null and SysUser.sysName!=''">
+                sys_name=#{SysUser.sysName},
+            </if>
+            <if test="SysUser.sysPassword!=null and SysUser.sysPassword!=''">
+                sys_password=#{SysUser.sysPassword},
+            </if>
+            sys_gender=#{SysUser.sysgender},
+            sys_corresponding_power=#{SysUser.sysCorrespondingPower},
+            <if test="SysUser.sysPowerStart!=null and SysUser.sysPowerStart!=''">
+                sys_power_start=#{SysUser.sysPowerStart},
+            </if>
+            <if test="SysUser.sysAdminStart!=null and SysUser.sysAdminStart!=''">
+                sys_admin_star=#{SysUser.sysAdminStart},
+            </if>
+            <if test="SysUser.sysAdminPower!=null and SysUser.sysAdminPower!=''">
+                sys_admin_power=#{SysUser.sysAdminPower},
+            </if>
+            sys_discontinued_state=#{SysUser.sysDiscontinuedState},
+            <if test="SysUser.sysLockedState!=null and SysUser.sysLockedState!=''">
+                sys_locked_state=#{SysUser.sysLockedState},
+            </if>
+            sys_department=#{SysUser.sysdepartment},
+            sys_telepthone=#{SysUser.systelepthone},
+            sys_adress=#{SysUser.sysadress},
+            sys_spanned=#{SysUser.sysspanned},
+            sys_access=#{SysUser.sysaccess}
+        </set>
+        <where>
+            <if test="SysUser.id!=null and SysUser.id!=''">
+                id=#{SysUser.id}
+            </if>
+        </where>
+    </update>
+    <delete id="deleteUsers" parameterType="java.util.List">
+        delete from sys_user where  sys_userKey in
+        <foreach collection="userid" separator="," open="(" close=")" item="userid">
+            #{userid}
+        </foreach>
+    </delete>
 </mapper>

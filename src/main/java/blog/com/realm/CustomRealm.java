@@ -95,22 +95,29 @@ public class CustomRealm extends AuthorizingRealm {
             if (StringUtils.isNotBlank(token.getUsername())) {
                 sysUsers = sysUserService.findByUname(token.getUsername(), 1, 1);
             }
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage());
         }
-        if (sysUsers.size() >= 2) {
+        catch (Exception e) {
+            LOGGER.error(e.getMessage());
+            return null;
+        }
+        if (sysUsers!=null&&sysUsers.size() >= 2) {
             LOGGER.error("请联系管理员,出现重复数据");
             throw new AccountException("请联系管理员,出现重复数据");
         }
         Collection<Session> sessions = sessionDAO.getActiveSessions();
-        System.out.println("seesion个数：" + sessions.size());
+        if (sessions!=null){
+            System.out.println("seesion个数：" + sessions.size());
         for (Session session : sessions) {
             System.out.println("seesionID:" + session.getId());
             System.out.println("登录ip:" + session.getHost());
             System.out.println("登录用户" + session.getAttribute(DefaultWebSubjectContext.PRINCIPALS_SESSION_KEY));
             System.out.println("最后操作日期:" + session.getLastAccessTime());
         }
-        if ("1".equals(sysUsers.get(0).getSysLockedState())) {
+        }
+        if (sysUsers==null){
+            throw new AuthenticationException();
+        }
+        else if ("1".equals(sysUsers.get(0).getSysLockedState())) {
             throw new LockedAccountException();
         } else if ("1".equals(sysUsers.get(0).getSysDiscontinuedState())) {
             throw new DisabledAccountException();

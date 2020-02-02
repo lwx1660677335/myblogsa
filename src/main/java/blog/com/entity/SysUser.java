@@ -1,4 +1,5 @@
 package blog.com.entity;
+import java.sql.Timestamp;
 
 
 public class SysUser {
@@ -8,8 +9,8 @@ public class SysUser {
   private String sysName;
   private String sysPassword;
   private String sysgender;
-  private java.sql.Timestamp sysCreteTime;
-  private java.sql.Timestamp sysEndTime;
+  private Timestamp sysCreteTime;
+  private Timestamp sysEndTime;
   private long sysCorrespondingPower;
   private String sysPowerStart;
   private String sysAdminStart;
@@ -17,11 +18,19 @@ public class SysUser {
   private String sysDiscontinuedState;
   private String sysLockedState;
   private String sysdepartment;
+  private SysDepartment sysdepartmentName;
   private String systelepthone;
   private String sysadress;
   private String sysspanned;
   private String sysaccess;
 
+  public SysDepartment getSysdepartmentName() {
+    return sysdepartmentName;
+  }
+
+  public void setSysdepartmentName(SysDepartment sysdepartmentName) {
+    this.sysdepartmentName = sysdepartmentName;
+  }
 
   public String getSysdepartment() {
     return sysdepartment;
@@ -122,7 +131,6 @@ public class SysUser {
     this.sysPassword = sysPassword;
   }
 
-
   public java.sql.Timestamp getSysCreteTime() {
     return sysCreteTime;
   }
@@ -130,7 +138,6 @@ public class SysUser {
   public void setSysCreteTime(java.sql.Timestamp sysCreteTime) {
     this.sysCreteTime = sysCreteTime;
   }
-
 
   public java.sql.Timestamp getSysEndTime() {
     return sysEndTime;

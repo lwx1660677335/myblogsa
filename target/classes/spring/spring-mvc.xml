@@ -55,4 +55,11 @@
                      allowed-headers="Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
                      allow-credentials="true" />
     </mvc:cors>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/get/**"/>
+            <mvc:mapping path="/Menu/**"/>
+            <bean class="blog.com.blogUtils.myInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
